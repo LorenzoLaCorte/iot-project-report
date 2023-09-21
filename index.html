@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Computer Science, Software Security, Software Engineering, Cybersecurity, Information Security, Programming, Coding, Algorithms, Data Structures, Network Security, Encryption, Authentication, Vulnerability Assessment, Penetration Testing, Malware Analysis, Secure Coding, Threat Modeling, Risk Assessment, Security Architecture, Web Application Security, Mobile App Security, DevSecOps, Secure Software Development, Code Review, Software Testing, Security Policies, Access Control, Identity Management, Cryptography, Privacy, Data Protection, Threat Detection, Incident Response, Cyber Resilience, Cloud Security, IoT Security, Software Development Lifecycle, Agile, Scrum, DevOps, Continuous Integration, Continuous Deployment, Threat Intelligence, Security Awareness, Ethical Hacking, Compliance, Secure SDLC, Bug Bounty, Zero-Day Vulnerabilities, Patch Management, Firewall, Intrusion Detection, Reverse Engineering, Security Standards, Authentication Protocols, Secure Communication, Secure Coding Guidelines, Software Design, Threat Mitigation, Risk Management, Security Best Practices, Security Training, Security Auditing, Open Source Security, Software Development Tools, Secure Code Libraries, Secure Coding Practices, Security Assessment, Security Metrics, Security Controls, Security Monitoring, Security Incident Handling, Cyber Threats, Secure Software Deployment, Secure Software Maintenance, Secure Software Updates, Software Quality Assurance, Secure Software Architecture, Security Compliance, Security Testing, Secure DevOps, Secure APIs, Software Hardening, Secure Code Review, Security Frameworks, Security Certifications, OWASP, NIST, ISO 27001, CISSP, CISM, CEH, CISA, Secure Software Lifecycle Management, Security Education, Secure Software Deployment, Secure Software Maintenance, Software Patching, Secure Software Updates">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Transport Monitoring with IoT</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Transport Monitoring with IoT</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://flowcv.me/lorenzolacorte" target="_blank">Lorenzo La Corte</a>, Davide Giovanetti and Davide Scarrà.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>The idea is to build an infrastructure to monitor the quality of road trips with different vehicles, mainly buses and trains. The aim is to track:</p>
+          <ul>
+              <li>Temperature</li>
+              <li>Crowding</li>
+              <li>Noise Pollution</li>
+              <li>Vehicle Movements</li>
+              <li>Punctuality</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Technologies</h2>
+        <div class="content has-text-justified">
+          <section id="android">
+            <h2>Android</h2>
+            <p>We've developed our own Android app in Java to gather data from the phone's various sensors. Temperature and crowd data, instead, are simulated since phones don't have sensors to gather such information. It uses the Eclipse Paho Java library, which manages connection and message transmission using MQTT protocol.</p>
+          </section>
+          
+          <section id="nodered">
+              <h2>NodeRED</h2>
+              <p>Our workflow aims to achieve different objectives:</p>
+              <ul>
+                  <li>Simulate the crowding and temperature sensors.</li>
+                  <li>Act as an intermediary between the application, utilizing an MQTT broker node powered by aedes.js and a ThingWorx node responsible for communicating with ThingWorx via the HTTP REST protocol.</li>
+                  <li>Manage the Telegram bot to send alerts when needed.</li>
+                  <li>Display real-time location on a map.</li>
+              </ul>
+          </section>
+          
+          <section id="thingworx">
+              <h2>ThingWorx</h2>
+              <h3>Entities</h3>
+              <p>Thing Value Stream: Representing the bus associated with the thing. Deriving from data of the value stream.</p>
+              <h3>Mashups</h3>
+              <p>Alerts: Triggered when Thing’s properties satisfy a specific condition.</p>
+              <p>Application Key: Needed to pass data from NodeRED to Thingworx.</p>
+          </section>
+          
+          <section id="dashboards">
+              <h2>Dashboards</h2>
+              <section id="map-node-red">
+                  <h3>Map - NodeRED</h3>
+                  <p>Pointer Movement Link to Dashboards Icon of the vehicle moving Line representing vehicle movements Links to ThingWorx Mashups</p>
+              </section>
+              
+              <section id="mashups-thingworx">
+                  <h3>Mashups - ThingWorx</h3>
+                  <p>Alerts Accelerometers: Showing the last alert triggered for each parameter and listing the information about it. Showing Gauges and Charts of Accelerometers X, Y, and Z, to monitor respectively the current value and its evolution over time. Same structure of accelerometers mashup but on these three metrics. Noise, Crowding, Temperature</p>
+              </section>
+          </section>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Description of The Project</h2>
+      <iframe src="static/pdfs/TransportMonitoringSlides.pdf" width="100%" height="550"> </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <iframe width="840" height="475" src="https://www.youtube.com/embed/xFB4vtpDdd0" title="Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <h2 class="subtitle has-text-centered">
+        This video shows all the parts of the project interacting together.
+      </h2>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
