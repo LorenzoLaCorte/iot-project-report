@@ -90,7 +90,9 @@
         <div class="content has-text-justified">
           <section id="android">
             <h2>Android</h2>
-            <p>We've developed our own Android app in Java to gather data from the phone's various sensors. Temperature and crowd data, instead, are simulated since phones don't have sensors to gather such information. It uses the Eclipse Paho Java library, which manages connection and message transmission using MQTT protocol.</p>
+            <p>We've developed our own Android app in Java to gather data from the phone's various sensors. </p> 
+            <p>Temperature and crowd data, instead, are simulated since phones don't have sensors to gather such information. </p>
+            <p>It uses the Eclipse Paho Java library, which manages connection and message transmission using MQTT protocol.</p>
           </section>
           
           <section id="nodered">
@@ -106,11 +108,14 @@
           
           <section id="thingworx">
               <h2>ThingWorx</h2>
-              <h3>Entities</h3>
-              <p>Thing Value Stream: Representing the bus associated with the thing. Deriving from data of the value stream.</p>
-              <h3>Mashups</h3>
-              <p>Alerts: Triggered when Thing’s properties satisfy a specific condition.</p>
-              <p>Application Key: Needed to pass data from NodeRED to Thingworx.</p>
+              <p>We have several entities working together in order to properly visualize data:</p>
+              <ul>
+                <li>Thing: Representing a single bus.</li>
+                <li>Thing Value Stream: Representing the bus associated with the thing. Deriving from data of the value stream.</li>
+                <li>Alerts: Triggered when Thing’s properties satisfy a specific condition.</li>
+                <li>Application Key: Needed to pass data from NodeRED to Thingworx.</li>
+                <li>Mashups: Dashboards showing data as tables, line charts or gauges.</li>
+              </ul>
           </section>
           
           <section id="dashboards">
@@ -122,10 +127,13 @@
               
               <section id="mashups-thingworx">
                   <h3>Mashups - ThingWorx</h3>
-                  <p>Alerts Accelerometers: Showing the last alert triggered for each parameter and listing the information about it. Showing Gauges and Charts of Accelerometers X, Y, and Z, to monitor respectively the current value and its evolution over time. Same structure of accelerometers mashup but on these three metrics. Noise, Crowding, Temperature</p>
+                  <ul>
+                    <li>Accelerometers: Showing Gauges and Charts of Accelerometers X, Y, and Z, to monitor respectively the current value and its evolution over time.</li>
+                    <li>Noise/Temperature/Crowding: Same structure of accelerometers mashup but on these three metrics: Noise, Crowding, Temperature.</li>
+                    <li>Alerts: Showing the last alert triggered for each parameter and listing the information about it.</li>
+                  </ul>
               </section>
           </section>
-      
         </div>
       </div>
     </div>
